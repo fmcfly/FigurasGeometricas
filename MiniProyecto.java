@@ -8,6 +8,8 @@ public class MiniProyecto{
 		System.out.println("Escoge la opción");
 		System.out.println("1) Rectangulo");
 		System.out.println("2) Circulo");
+		System.out.println("3) Triangulo Isoceles");
+		// AQUI VA TU PARTE ANAKIN
 		int opcion = sc.nextInt();		
 		switch(opcion){
 			case 1:
@@ -43,7 +45,18 @@ public class MiniProyecto{
 			break;
 			case 3:
 				// Triangulo Iscoleses
-				
+				TrianguloIso calc =new TrianguloIso();
+
+				System.out.println("Dame la longitud de la base");
+				calc.setBase(sc.nextDouble());
+
+
+				System.out.println("Dame la longitud de los lados");
+				calc.setLados(sc.nextDouble());
+
+				double perimetrot=(calc.getLados() * 2)+ calc.getBase();
+				calc.setPerimetro(perimetrot);
+				System.out.println("EL perimetro es: "+calc.getPerimetro());
 			break;
 		}
 	}
